@@ -11,15 +11,15 @@ lombok、Swagger2、druid
 模块后面的数字为端口号<br/>
 spring-cloud-scaffold <br/>
 |<br/>
-common —— 公用模块<br/>
++——common —— 公用模块<br/>
 |<br/>
-consumer —— 消费者模块<br/>
++——consumer —— 消费者模块<br/>
 |<br/>
-eureka —— eureka服务端（其它两个是集群已配置好了，集群连接一下即可使用）<br/>
++——eureka —— eureka服务端（其它两个是集群已配置好了，集群连接一下即可使用）<br/>
 |<br/>
-provider —— 生产接口的微服务 <br/>
++——provider —— 生产接口的微服务 <br/>
 |<br/>
-turbine —— 微服务多了再启用吧，暂时用不上<br/>
++——turbine —— 微服务多了再启用吧，暂时用不上<br/>
 |<br/>
-Zuul —— 路由网关服务端<br/>
++——Zuul —— 路由网关服务端<br/>
 <br/>
