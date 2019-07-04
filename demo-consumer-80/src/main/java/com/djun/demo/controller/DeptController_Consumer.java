@@ -1,8 +1,8 @@
 package com.djun.demo.controller;
 
 
-import com.djun.demo.dept.entity.Dept;
-import com.djun.demo.dept.service.DeptClientService;
+import com.djun.demo.deptservice.entity.Dept;
+import com.djun.demo.deptservice.service.DeptClientService;
 import com.djun.demo.common.JSONResult;
 import org.springframework.web.bind.annotation.*;
 

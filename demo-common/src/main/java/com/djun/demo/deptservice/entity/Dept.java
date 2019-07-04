@@ -1,4 +1,4 @@
-package com.djun.demo.dept.entity;
+package com.djun.demo.deptservice.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

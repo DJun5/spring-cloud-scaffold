@@ -11,6 +11,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/demo-admin-8788/pom.xml" />
         <option value="$PROJECT_DIR$/demo-config-3344/pom.xml" />
         <option value="$PROJECT_DIR$/demo-config-client-3355/pom.xml" />
         <option value="$PROJECT_DIR$/demo-config-eureka-7001/pom.xml" />

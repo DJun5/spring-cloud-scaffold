@@ -1,6 +1,6 @@
 package com.djun.demo.controller;
 
-import com.djun.demo.dept.entity.Dept;
+import com.djun.demo.deptservice.entity.Dept;
 import com.djun.demo.service.DeptService;
 import com.djun.demo.common.JSONResult;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;

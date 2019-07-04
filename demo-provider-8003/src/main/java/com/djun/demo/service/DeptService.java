@@ -1,6 +1,6 @@
 package com.djun.demo.service;
 
-import com.djun.demo.dept.entity.Dept;
+import com.djun.demo.deptservice.entity.Dept;
 
 import java.util.List;
 

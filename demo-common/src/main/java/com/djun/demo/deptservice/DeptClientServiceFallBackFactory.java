@@ -1,7 +1,7 @@
-package com.djun.demo.dept;
+package com.djun.demo.deptservice;
 
-import com.djun.demo.dept.service.DeptClientService;
-import com.djun.demo.dept.entity.Dept;
+import com.djun.demo.deptservice.service.DeptClientService;
+import com.djun.demo.deptservice.entity.Dept;
 import com.djun.demo.common.JSONResult;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;

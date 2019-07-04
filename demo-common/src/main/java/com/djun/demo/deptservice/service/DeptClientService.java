@@ -1,7 +1,7 @@
-package com.djun.demo.dept.service;
+package com.djun.demo.deptservice.service;
 
-import com.djun.demo.dept.entity.Dept;
-import com.djun.demo.dept.DeptClientServiceFallBackFactory;
+import com.djun.demo.deptservice.entity.Dept;
+import com.djun.demo.deptservice.DeptClientServiceFallBackFactory;
 import com.djun.demo.common.JSONResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;

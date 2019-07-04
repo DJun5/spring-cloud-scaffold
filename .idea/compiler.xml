@@ -19,6 +19,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo-admin-8788" target="1.8" />
       <module name="demo-common" target="1.8" />
       <module name="demo-config-3344" target="1.8" />
       <module name="demo-config-client-3355" target="1.8" />
@@ -39,6 +40,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo-admin-8788" options="-parameters" />
       <module name="demo-common" options="-parameters" />
       <module name="demo-config-3344" options="-parameters" />
       <module name="demo-config-client-3355" options="-parameters" />
