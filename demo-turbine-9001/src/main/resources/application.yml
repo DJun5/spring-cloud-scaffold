@@ -1,0 +1,40 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: turbline-server-9001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env
+  endpoint:
+    health:
+      show-details: always
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: turbline-9001.com
+    prefer-ip-address: true
+# turbine配置
+turbine:
+  # 需要监控的应用名称，默认逗号隔开，内部使用 Stringutils.commaDelimitedListToStringArray分割
+  app-config: DEPT-PROVIDER-8001
+  # false 时 在本机才是时 监控中host集群数会为1了 因为本地host是一样的
+  combine-host-port: true
+  # 集群名称
+  cluster-name-expression: new String('default')
+
+
+# info是当前微服务的信息
+info:
+  app.name: turbline-server-9001
+  company.name: com.djun.demo
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
