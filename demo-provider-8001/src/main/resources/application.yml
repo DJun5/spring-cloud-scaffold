@@ -9,19 +9,23 @@ mybatis:
 spring:
   application:
     name: deptservice-provider-8001
+
   datasource:
     driver-class-name: com.mysql.jdbc.Driver                # mysql驱动包
     url: jdbc:mysql://localhost:3306/cloud01?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+
     dbcp2:
       min-idle: 5                                           # 数据库连接池的最小维持连接数
       initial-size: 5                                       # 初始化连接数
       max-total: 5                                          # 最大连接数
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
     tomcat:
-      max-wait: 30000                                       # 配置间隔多久才进行一次检测需要关闭的空闲连接，单位是毫秒
+      max-wait: 30000
+      # 配置间隔多久才进行一次检测需要关闭的空闲连接，单位是毫秒
+
   redis:
     host: 10.12.9.108
     # Redis数据库索引（默认为0）
@@ -39,7 +43,14 @@ spring:
         max-idle: 8
         # 连接池中的最小空闲连接
         min-idle: 0
-    timeout: 3000ms # 连接超时时间（毫秒）
+        # 连接超时时间（毫秒）
+    timeout: 3000ms
+
+  data:
+    mongodb:
+      host: mongo
+      port: 27017
+      database: cloud01
 
 eureka:
   client:
@@ -63,13 +74,12 @@ redis:
     expire:
       authCode: 120 # 验证码超期时间
 
-# 自定义解密密码密钥
+# 加密密钥
 password:
   key: "djun"
 
-jwt:
-  secret: "djun"
-  expiration: 120
+
+
 # info是当前微服务的信息
 info:
   app.name: deptservice-8001
@@ -77,4 +87,7 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
+# 日志配置
+logging:
+  path: /var/logs
 
