@@ -1,6 +1,7 @@
 package com.djun.demo;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -19,6 +20,7 @@ import org.springframework.context.annotation.Bean;
 @EnableDiscoveryClient
 // Hystrix断路器
 @EnableCircuitBreaker
+@MapperScan("com.djun.demo.mapper")
 public class DemoProvider8001_App {
     // 启动嵌入式的 Tomcat 并初始化 Spring 环境及其各 Spring 组件
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.djun.demo.service;
+package com.djun.demo.deptservice.service;
 
 import com.djun.demo.deptservice.entity.Dept;
 

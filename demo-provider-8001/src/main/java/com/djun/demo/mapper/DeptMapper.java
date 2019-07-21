@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * created by DJun on 2019/6/20
  */
-@Mapper
+
 public interface DeptMapper {
     boolean addDept(Dept modelName);
     List<Dept> findById(Long id);

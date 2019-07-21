@@ -1,8 +1,8 @@
-package com.djun.demo.service.impl;
+package com.djun.demo.serviceImpl;
 
 import com.djun.demo.mapper.DeptMapper;
 import com.djun.demo.deptservice.entity.Dept;
-import com.djun.demo.service.DeptService;
+import com.djun.demo.deptservice.service.DeptService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

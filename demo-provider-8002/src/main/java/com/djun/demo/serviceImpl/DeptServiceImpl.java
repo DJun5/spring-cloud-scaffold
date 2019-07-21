@@ -1,4 +1,4 @@
-package com.djun.demo.service.impl;
+package com.djun.demo.serviceImpl;
 
 import com.djun.demo.mapper.DeptMapper;
 import com.djun.demo.deptservice.entity.Dept;
