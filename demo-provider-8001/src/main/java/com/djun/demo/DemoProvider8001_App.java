@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Bean;
 @EnableDiscoveryClient
 // Hystrix断路器
 @EnableCircuitBreaker
-@MapperScan("com.djun.demo.mapper")
+@MapperScan(value = {"com.djun.demo.mapper"})
 public class DemoProvider8001_App {
     // 启动嵌入式的 Tomcat 并初始化 Spring 环境及其各 Spring 组件
     public static void main(String[] args) {

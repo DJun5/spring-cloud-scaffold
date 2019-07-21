@@ -63,9 +63,18 @@ redis:
     expire:
       authCode: 120 # 验证码超期时间
 
+# 自定义解密密码密钥
+password:
+  key: "djun"
+
+jwt:
+  secret: "djun"
+  expiration: 120
 # info是当前微服务的信息
 info:
   app.name: deptservice-8001
   company.name: com.djun.demo
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+
+

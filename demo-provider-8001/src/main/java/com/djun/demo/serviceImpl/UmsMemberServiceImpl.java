@@ -35,6 +35,10 @@ public class UmsMemberServiceImpl implements UmsMemberService {
     private Long AUTH_CODE_EXPIRE_SECONDS;
 
     private UmsMemberExample memberModel;
+    @Value("${password.key}")
+    private String pwd ;
+
+    private EncryptUtil encryptUtil = new EncryptUtil();
 
     @Override
     public UmsMember getByUsername(String username) {
@@ -54,7 +58,37 @@ public class UmsMemberServiceImpl implements UmsMemberService {
 
     @Override
     public CommonResult register(String username, String password, String telephone, String authCode) {
-        return null;
+        //验证验证码
+        if(!verifyAuthCode(authCode,telephone)){
+            return CommonResult.failed("验证码错误");
+        }
+        //查询是否已有该用户
+        UmsMemberExample example = new UmsMemberExample();
+
+        example.createCriteria().andUsernameEqualTo(username);
+        example.or(example.createCriteria().andMobileEqualTo(telephone));
+        List<UmsMember> umsMembers = memberMapper.selectByExample(example);
+
+        if (!CollectionUtils.isEmpty(umsMembers)) {
+            return CommonResult.failed("该用户已经存在");
+        }
+        //没有该用户进行添加操作
+        UmsMember umsMember = new UmsMember();
+        umsMember.setUsername(username);
+        umsMember.setMobile(telephone);
+        umsMember.setPassword(encryptUtil.DESencode(password,pwd));
+//        umsMember.setCreateTime(new Date());
+//        umsMember.setStatus(1);
+        //获取默认会员等级并设置
+//        UmsMemberLevelExample levelExample = new UmsMemberLevelExample();
+//        levelExample.createCriteria().andDefaultStatusEqualTo(1);
+//        List<UmsMemberLevel> memberLevelList = memberLevelMapper.selectByExample(levelExample);
+//        if (!CollectionUtils.isEmpty(memberLevelList)) {
+//            umsMember.setMemberLevelId(memberLevelList.get(0).getId());
+//        }
+        memberMapper.insert(umsMember);
+        umsMember.setPassword(null);
+        return CommonResult.success(null,"注册成功");
     }
 
     @Override
@@ -75,8 +109,8 @@ public class UmsMemberServiceImpl implements UmsMemberService {
     @Override
     public CommonResult updatePassword(String telephone, String password, String authCode) {
         memberModel = new UmsMemberExample();
-        EncryptUtil encryptUtil = new EncryptUtil();
-        String pwd = "djun";
+
+
         memberModel.createCriteria().andMobileEqualTo(telephone);
         List<UmsMember> memberList = memberMapper.selectByExample(memberModel);
         if (CollectionUtils.isEmpty(memberList)) {
@@ -87,6 +121,8 @@ public class UmsMemberServiceImpl implements UmsMemberService {
             return CommonResult.failed("验证码错误");
         }
         UmsMember umsMember = memberList.get(0);
+        // 密码应当使用单向加密
+
         umsMember.setPassword(encryptUtil.DESencode(password,pwd));
         memberMapper.updateByPrimaryKeySelective(umsMember);
         return CommonResult.success(null, "密码修改成功");

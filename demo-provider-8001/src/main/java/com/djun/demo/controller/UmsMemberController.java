@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  */
 @Api(tags = "UmsMemberController", description = "用户登录注册修改管理")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/sso")
 public class UmsMemberController {
     @Resource
     private UmsMemberService memberService;
@@ -23,7 +23,6 @@ public class UmsMemberController {
     @GetMapping(value = "/getAuthCode")
     @ResponseBody
     public CommonResult getAuthCode(@RequestParam String telephone) {
-
         return memberService.generateAuthCode(telephone);
     }
 
