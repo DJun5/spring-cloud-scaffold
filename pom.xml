@@ -20,6 +20,8 @@
         <module>demo-consumer-80</module>
         <module>demo-turbine-9001</module>
         <module>demo-zuul-9527</module>
+        <module>demo-security-8601</module>
+        <module>demo-mgb</module>
     </modules>
 
     <parent>
@@ -79,6 +81,7 @@
                 <artifactId>druid</artifactId>
                 <version>1.0.31</version>
             </dependency>
+            <!-- druid 连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
