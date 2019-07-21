@@ -1,4 +1,4 @@
-package com.djun.demo.config;
+package com.djun.demo.common.config;
 
 
 import org.springframework.context.annotation.Configuration;

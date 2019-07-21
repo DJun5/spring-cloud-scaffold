@@ -1,8 +1,8 @@
 package com.djun.demo.deptservice;
 
+import com.djun.demo.common.result.CommonResult;
 import com.djun.demo.deptservice.service.DeptClientService;
 import com.djun.demo.deptservice.entity.Dept;
-import com.djun.demo.common.JSONResult;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
@@ -12,28 +12,30 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class DeptClientServiceFallBackFactory implements FallbackFactory<DeptClientService> {
+
     private final static String ERROR_MSG="服务暂不可用，";
+
     @Override
     public DeptClientService create(Throwable cause) {
         return new DeptClientService() {
             @Override
-            public JSONResult getAll() {
-                return JSONResult.errorMsg(ERROR_MSG+"查询失败！");
+            public CommonResult getAll() {
+                return CommonResult.failed(ERROR_MSG+"查询失败！");
             }
 
             @Override
-            public JSONResult add(Dept model) {
-                return JSONResult.errorMap(ERROR_MSG+"添加失败！");
+            public CommonResult add(Dept model) {
+                return CommonResult.failed(ERROR_MSG+"添加失败！");
             }
 
             @Override
-            public JSONResult get(Long id) {
-                return JSONResult.errorMsg(ERROR_MSG+"id:"+id+" 查询失败！");
+            public CommonResult get(Long id) {
+                return CommonResult.failed(ERROR_MSG+"id:"+id+" 查询失败！");
             }
 
             @Override
-            public JSONResult delete(Long id) {
-                return JSONResult.errorMsg(ERROR_MSG+"id:"+id+" 删除失败！");
+            public CommonResult delete(Long id) {
+                return CommonResult.failed(ERROR_MSG+"id:"+id+" 删除失败！");
             }
         };
 

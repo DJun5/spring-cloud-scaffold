@@ -1,4 +1,4 @@
-package com.djun.demo.config;
+package com.djun.demo.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,9 +31,9 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //设置文档的标题
-                .title("接口文档")
+                .title("Hello系统接口文档")
                 //设置文档的描述->1.Overview
-                .description("更多内容请关注：http://www.baidu.com")
+                .description("Hello系统更多内容请关注：http://www.baidu.com")
                 //设置文档的版本信息-> 1.1 Version information
                 .version(VERSION)
                 //设置文档的联系方式->1.2 Contact information
@@ -42,5 +42,4 @@ public class SwaggerConfig {
                 .termsOfServiceUrl("www.baidu.com")
                 .build();
     }
-
 }

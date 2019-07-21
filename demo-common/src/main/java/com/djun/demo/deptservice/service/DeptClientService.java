@@ -1,8 +1,9 @@
 package com.djun.demo.deptservice.service;
 
+import com.djun.demo.common.result.CommonResult;
 import com.djun.demo.deptservice.entity.Dept;
 import com.djun.demo.deptservice.DeptClientServiceFallBackFactory;
-import com.djun.demo.common.JSONResult;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * created by DJun on 2019/6/27
  */
 
-@FeignClient(value = "MICROSERVICE-DEMO",fallbackFactory = DeptClientServiceFallBackFactory.class)
+@FeignClient(value = "DEPTSERVICE-PROVIDER-8001",fallbackFactory = DeptClientServiceFallBackFactory.class)
 
 public interface DeptClientService {
     /**
@@ -19,15 +20,15 @@ public interface DeptClientService {
      */
 
     @GetMapping("/dept/list")
-    JSONResult getAll();
+    CommonResult getAll();
 
     @PostMapping("/dept/add")
-    JSONResult add(@RequestBody Dept model);
+    CommonResult add(@RequestBody Dept model);
 
     @GetMapping("/dept/findById/{id}")
-    JSONResult get(@PathVariable("id") Long id);
+    CommonResult get(@PathVariable("id") Long id);
 
     @PostMapping("/dept/delete/{id}")
-    JSONResult delete(@PathVariable("id") Long id);
+    CommonResult delete(@PathVariable("id") Long id);
 
 }
