@@ -11,10 +11,11 @@
         <module name="demo-eureka-7001" />
         <module name="demo-eureka-7002" />
         <module name="demo-eureka-7003" />
-        <module name="demo-mgb" />
+        <module name="demo-mbg" />
         <module name="demo-provider-8001" />
         <module name="demo-provider-8002" />
         <module name="demo-provider-8003" />
+        <module name="demo-search-6001" />
         <module name="demo-security-8601" />
         <module name="demo-turbine-9001" />
         <module name="demo-zuul-9527" />
@@ -31,11 +32,12 @@
       <module name="demo-eureka-7001" target="1.8" />
       <module name="demo-eureka-7002" target="1.8" />
       <module name="demo-eureka-7003" target="1.8" />
-      <module name="demo-mgb" target="1.8" />
+      <module name="demo-mbg" target="1.8" />
       <module name="demo-provider-8001" target="1.8" />
       <module name="demo-provider-8002" target="1.8" />
       <module name="demo-provider-8003" target="1.8" />
       <module name="demo-provider-hystrix-8001" target="1.8" />
+      <module name="demo-search-6001" target="1.8" />
       <module name="demo-security-8601" target="1.8" />
       <module name="demo-turbine-9001" target="1.8" />
       <module name="demo-zuul-9527" target="1.8" />
@@ -54,11 +56,12 @@
       <module name="demo-eureka-7001" options="-parameters" />
       <module name="demo-eureka-7002" options="-parameters" />
       <module name="demo-eureka-7003" options="-parameters" />
-      <module name="demo-mgb" options="-parameters" />
+      <module name="demo-mbg" options="-parameters" />
       <module name="demo-provider-8001" options="-parameters" />
       <module name="demo-provider-8002" options="-parameters" />
       <module name="demo-provider-8003" options="-parameters" />
       <module name="demo-provider-hystrix-8001" options="-parameters" />
+      <module name="demo-search-6001" options="-parameters" />
       <module name="demo-security-8601" options="-parameters" />
       <module name="demo-turbine-9001" options="-parameters" />
       <module name="demo-zuul-9527" options="-parameters" />

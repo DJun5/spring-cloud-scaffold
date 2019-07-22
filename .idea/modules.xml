@@ -7,10 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/demo-eureka-7001/demo-eureka-7001.iml" filepath="$PROJECT_DIR$/demo-eureka-7001/demo-eureka-7001.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-eureka-7002/demo-eureka-7002.iml" filepath="$PROJECT_DIR$/demo-eureka-7002/demo-eureka-7002.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-eureka-7003/demo-eureka-7003.iml" filepath="$PROJECT_DIR$/demo-eureka-7003/demo-eureka-7003.iml" />
-      <module fileurl="file://$PROJECT_DIR$/demo-mgb/demo-mgb.iml" filepath="$PROJECT_DIR$/demo-mgb/demo-mgb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-mbg/demo-mbg.iml" filepath="$PROJECT_DIR$/demo-mbg/demo-mbg.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-provider-8001/demo-provider-8001.iml" filepath="$PROJECT_DIR$/demo-provider-8001/demo-provider-8001.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-provider-8002/demo-provider-8002.iml" filepath="$PROJECT_DIR$/demo-provider-8002/demo-provider-8002.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-provider-8003/demo-provider-8003.iml" filepath="$PROJECT_DIR$/demo-provider-8003/demo-provider-8003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-search-6001/demo-search-6001.iml" filepath="$PROJECT_DIR$/demo-search-6001/demo-search-6001.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-security-8601/demo-security-8601.iml" filepath="$PROJECT_DIR$/demo-security-8601/demo-security-8601.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-turbine-9001/demo-turbine-9001.iml" filepath="$PROJECT_DIR$/demo-turbine-9001/demo-turbine-9001.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-zuul-9527/demo-zuul-9527.iml" filepath="$PROJECT_DIR$/demo-zuul-9527/demo-zuul-9527.iml" />

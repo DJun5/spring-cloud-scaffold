@@ -21,7 +21,8 @@
         <module>demo-turbine-9001</module>
         <module>demo-zuul-9527</module>
         <module>demo-security-8601</module>
-        <module>demo-mgb</module>
+        <module>demo-mbg</module>
+        <module>demo-search</module>
     </modules>
 
     <parent>
