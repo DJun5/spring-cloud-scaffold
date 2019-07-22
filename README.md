@@ -2,7 +2,7 @@
 目的是帮助我们快速搭建分布式的架子
 ## 一、关于引用的技术
 ### 1、Spring Cloud
-Eureka、Hystrix、feign、turbine、Zuul
+Spring Boot、Redis、Eureka、Hystrix、feign、turbine、Zuul
 如果你需要使用Config的话，只需要创建一个Config的Server端即可。
 ### 2、Spring Boot
 lombok、Swagger2、druid
@@ -22,4 +22,5 @@ spring-cloud-scaffold <br/>
 +——turbine —— 微服务多了再启用吧，暂时用不上<br/>
 |<br/>
 +——Zuul —— 路由网关服务端<br/>
-<br/>
+|<br/>
++—— mgb —— mybatis generator插件自动生成model、mapper、xml

@@ -14,6 +14,7 @@ management:
   endpoint:
     health:
       show-details: always
+
 eureka:
   client:
     service-url:
@@ -25,7 +26,7 @@ eureka:
 # turbine配置
 turbine:
   # 需要监控的应用名称，默认逗号隔开，内部使用 Stringutils.commaDelimitedListToStringArray分割
-  app-config: DEPT-PROVIDER-8001
+  app-config: DEPT-PROVIDER-8001,DEMO-GATEWAY
   # false 时 在本机才是时 监控中host集群数会为1了 因为本地host是一样的
   combine-host-port: true
   # 集群名称

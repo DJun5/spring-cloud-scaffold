@@ -7,23 +7,26 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
   instance:
     instance-id: gateway-9527.com
     prefer-ip-address: true
+
 info:
   app.name: demo-gateway
   company.name: com.djun.demo
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+
 zuul:
   routes:
     # 隐藏微服务名称，dept是自定义的
-    dept.serviceId: microservice-demo
+    dept.serviceId: DEPTSERVICE-PROVIDER-8001
     # 域名映射
     dept.path: /**
     # 解决访问修改前的指定服务名生效的问题
-#  ignored-services: microservice-demo
+#  ignored-services: DEPTSERVICE-PROVIDER-8001
   # 关闭全部服务名的访问
   ignored-services: "*"
   # 接口访问路径加上前缀

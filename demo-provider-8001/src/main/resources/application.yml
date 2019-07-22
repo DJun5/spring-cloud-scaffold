@@ -46,9 +46,17 @@ spring:
         # 连接超时时间（毫秒）
     timeout: 3000ms
 
+  rabbitmq:
+    host: 10.12.9.108
+    port: 5672
+    virtual-host: /demo
+    username: guest
+    password: guest
+    publisher-confirms: true #如果对异步消息需要回调必须设置为true
+
   data:
     mongodb:
-      host: mongo
+      host: 10.12.9.108
       port: 27017
       database: cloud01
 
@@ -74,6 +82,7 @@ redis:
     expire:
       authCode: 120 # 验证码超期时间
 
+
 # 加密密钥
 password:
   key: "djun"
@@ -89,5 +98,8 @@ info:
 
 # 日志配置
 logging:
-  path: /var/logs
+  level:
+    org.springframework.data.mongodb.core: debug
+    com.macro.mall.mapper: debug
+    com.macro.mall.portal.dao: debug
 

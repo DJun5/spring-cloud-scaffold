@@ -1,0 +1,18 @@
+server:
+  port: 8601
+spring:
+  application:
+    name: security-server-8601
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: security-8601.com
+    prefer-ip-address: true
+
+info:
+  app.name: demo-gateway
+  company.name: com.djun.demo
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

@@ -2,15 +2,16 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/demo-admin-8788" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-consumer-80" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-eureka-7001" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-eureka-7002" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-eureka-7003" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-mgb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-provider-8001" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-provider-8002" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-provider-8003" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-security-8601" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-turbine-9001" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-zuul-9527" charset="UTF-8" />
   </component>
