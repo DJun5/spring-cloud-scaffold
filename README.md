@@ -1,5 +1,5 @@
 # SpringCloud 的脚手架
-目的是帮助我们快速搭建分布式的架子
+练习时创建的简易分布式架子
 ## 一、关于引用的技术
 ### 1、Spring Cloud
 Spring Boot、Redis、Eureka、Hystrix、feign、turbine、Zuul
